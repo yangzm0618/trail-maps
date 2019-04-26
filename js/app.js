@@ -10,7 +10,7 @@ var API={
 
 API.getTrailData().then(function(data){
     var viewContainer=document.getElementById("J_Main"),viewWidth=viewContainer.offsetWidth,viewHeight=viewContainer.offsetHeight;
-    trailGraphInit(data,viewContainer,viewWidth,viewHeight);
+    trailGraphInit(data,viewContainer,viewWidth,viewHeight,viewContainer);
 });
 
 /**
@@ -20,7 +20,7 @@ API.getTrailData().then(function(data){
  * @param viewWidth  图表容器宽度
  * @param viewHeight 图表容器高度
  */
-function trailGraphInit(data,container,viewWidth,viewHeight){
+function trailGraphInit(data,container,viewWidth,viewHeight,viewContainer){
     var myChart = echarts.init(viewContainer);
     var option = {
         grid: {
